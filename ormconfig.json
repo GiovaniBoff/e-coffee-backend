@@ -6,10 +6,14 @@
     "password": "123",
     "database": "postgres",
     "migrationsRun": true,
+    "entities": [
+        "./dist/data/entites/**/*.js"
+    ],
     "migrations": [
-        "migrations/*.ts"
+        "dist/db/migrations/*.js"
     ],
     "cli": {
-        "migrationsDir": "src/db/migrations"
+        "migrationsDir": "src/db/migrations",
+        "entitiesDir": "src/db/models"
     }
 }

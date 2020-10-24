@@ -15,17 +15,15 @@ enum CoffeeEnumType {
     'lungo'
 }
 
-
-
 @Entity()
-export class Coffee {
+export default class Coffee {
     @PrimaryGeneratedColumn('uuid')
     id: string;
 
     @Column({ type: 'varchar', length: '80' })
     name: string;
 
-    @Column({ type: 'int' })
+    @Column()
     coffeeType: CoffeeEnumType;
 
     @Column({ type: 'numeric' })

@@ -1,7 +1,7 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm'
 
 @Entity()
-export class Store {
+export default class Store {
     @PrimaryGeneratedColumn('uuid')
     id: string;
 
